@@ -1,6 +1,6 @@
 # 🎯 Lead Conversion Prediction & Scoring Engine
 
-A end-to-end Machine Learning pipeline built to predict lead conversion probabilities and score incoming leads to optimize sales team efficiency. This project compares **Logistic Regression**, **Random Forest**, and **XGBoost** models, optimized via **GridSearchCV** with cross-validation.
+An end-to-end Machine Learning pipeline built to predict lead conversion probabilities and score incoming leads to optimize sales team efficiency. This project compares **Logistic Regression**, **Random Forest**, and **XGBoost** models, optimized via **GridSearchCV** with cross-validation.
 
 ---
 
@@ -10,6 +10,17 @@ In B2B and high-ticket B2C sales funnels, sales representatives waste significan
 1. Predict whether a lead will convert (`1`) or not (`0`).
 2. Identify high-priority **"Hot Leads"** using model-generated probability scores (0–100 scale).
 3. Maximize **Precision** and **ROC-AUC** to minimize false alarms and focus team efforts on viable leads.
+
+---
+
+## 📊 Dataset Overview
+
+This project utilizes the **Lead Scoring Dataset** (often referred to as `Leads.csv`). 
+
+* **File Name:** `Leads.csv`
+* **Description:** Contains interaction metrics, website behavior logs, and lead demographic attributes used to predict lead conversion probabilities.
+* **Key Features:** `Lead Origin`, `Tags`, `Total Time Spent on Website`, `Page Views Per Visit`, `Last Activity`.
+* **Note:** The raw data file is excluded from this repository via `.gitignore` to maintain a lightweight environment. You can place your own `Leads.csv` in the root directory to run the pipeline.
 
 ---
 
@@ -47,13 +58,4 @@ All models were evaluated on an out-of-sample test set (20% split) using **ROC-A
 ```text
 Confusion Matrix:
 [[1057   68]   <- 68 False Positives
- [  96  594]]   <- 594 True Positives (86% Recall)
-
- ## 📊 Dataset Overview
-
-This project utilizes the **Lead Scoring Dataset** (often referred to as `Leads.csv`). 
-
-* **File Name:** `Leads.csv`
-* **Description:** Contains interaction metrics, website behavior logs, and lead demographic attributes used to predict lead conversion probabilities.
-* **Key Features:** `Lead Origin`, `Tags`, `Total Time Spent on Website`, `Page Views Per Visit`, `Last Activity`.
-* **Note:** The raw data file is excluded from this repository via `.gitignore` to maintain a lightweight environment. You can place your own `Leads.csv` in the root directory to run the pipeline.
+ [  96  594]]  <- 594 True Positives (86% Recall)
