@@ -48,3 +48,12 @@ All models were evaluated on an out-of-sample test set (20% split) using **ROC-A
 Confusion Matrix:
 [[1057   68]   <- 68 False Positives
  [  96  594]]   <- 594 True Positives (86% Recall)
+
+ ## 📊 Dataset Overview
+
+This project utilizes the **Lead Scoring Dataset** (often referred to as `Leads.csv`). 
+
+* **File Name:** `Leads.csv`
+* **Description:** Contains interaction metrics, website behavior logs, and lead demographic attributes used to predict lead conversion probabilities.
+* **Key Features:** `Lead Origin`, `Tags`, `Total Time Spent on Website`, `Page Views Per Visit`, `Last Activity`.
+* **Note:** The raw data file is excluded from this repository via `.gitignore` to maintain a lightweight environment. You can place your own `Leads.csv` in the root directory to run the pipeline.
